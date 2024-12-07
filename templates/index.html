@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section-container">
+    <h2 class="section-title">{{ section.title }}</h2>
+    <div class="text-container">
+        <p class="section-description">{{ section.content | safe }}</p>
+    </div>
+</div>
+
+
+    <div class="card-container">
+        <!-- First Card -->
+        <div class="card">
+            <a href="/docs/installation/" class="card-link">
+                <div class="card-icon">
+                    <span data-uk-icon="icon: cog; ratio: 3.4"></span>
+                </div>
+                <h3 class="popular-articles-card">Get Started</h3>
+                <p>Get started fast with installation and theme setup instructions</p>
+            </a>
+        </div>
+        
+        <!-- Second Card -->
+        <div class="card">
+            <a href="/docs/hero/" class="card-link">
+                <div class="card-icon">
+                    <span data-uk-icon="icon: settings; ratio: 3.4"></span>
+                </div>
+                <h3 class="popular-articles-card">Theme Features</h3>
+                <p>Learn about all the theme options, features, and how to use them</p>
+            </a>
+        </div>
+        
+        <!-- Third Card -->
+        <div class="card">
+            <a href="/docs/customize/" class="card-link">
+                <div class="card-icon">
+                    <span data-uk-icon="icon: code; ratio: 3.4"></span>
+                </div>
+                <h3 class="popular-articles-card">Customization</h3>
+                <p>Get help or tailor the theme to your specific requirements</p>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <h3 class="faq-subtitle">Your questions, answered</h3>
+    
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is this website about?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>This website provides a variety of resources, guides, and documentation to help you get started and explore more about our services.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I get started?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Begin by reading the 'Getting Started' section in the documentation to set up your environment and understand how things work.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the theme customization process?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Customization is simple. You can change settings in the configuration file and use the built-in features to adjust the layout.</p>
+                </div>
+            </div>
+            
+            <!-- Add more FAQ items as needed -->
+        </div>
+    </div>
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Popular Articles Section -->
+<div class="popular-articles-container">
+    <h2 class="popular-articles-title">Popular Articles</h2>
+    <p class="popular-articles-subtitle">Check out our most read articles and get inspired by the latest trends and ideas.</p>
+
+    <!-- Articles Cards -->
+    <div class="popular-articles-cards">
+        <!-- Article Card 1 -->
+        <div class="popular-articles-card">
+            <h3>Getting Started with the Theme</h3>
+            <p>Learn how to quickly set up and get started with our theme, including installation and setup instructions.</p>
+            <a href="/docs/installation/">Read More</a>
+        </div>
+
+        <!-- Article Card 2 -->
+        <div class="popular-articles-card">
+            <h3>Customization Tips</h3>
+            <p>Find out how to customize the theme to suit your needs, including colors, fonts, and layouts.</p>
+            <a href="/docs/customize/">Read More</a>
+        </div>
+
+        <!-- Article Card 3 -->
+        <div class="popular-articles-card">
+            <h3>Advanced Features</h3>
+            <p>Explore the advanced features of the theme, including custom widgets, settings, and more.</p>
+            <a href="/docs/features/">Read More</a>
+        </div>
+
+        <!-- Add more article cards as needed -->
+    </div>
+</div>
+
+
+
+   
+{% endblock content %}

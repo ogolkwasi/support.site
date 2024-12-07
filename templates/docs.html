@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="docs-container">
+    <!-- Sidebar Table of Contents (Vertical) -->
+    <div class="vertical-toc">
+        <ul>
+            <li><a href="#section-1">Getting Started</a></li>
+            <li><a href="#section-2">Installation</a></li>
+            <li><a href="#section-3">Theme Features</a></li>
+            <li><a href="#section-4">Customization</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <div id="section-1" class="content-section">
+            <h2>Getting Started</h2>
+            <p>This section introduces you to the theme...</p>
+        </div>
+        <div id="section-2" class="content-section">
+            <h2>Installation</h2>
+            <p>Follow these steps to install the theme...</p>
+        </div>
+        <div id="section-3" class="content-section">
+            <h2>Theme Features</h2>
+            <p>Explore the theme's features...</p>
+        </div>
+        <div id="section-4" class="content-section">
+            <h2>Customization</h2>
+            <p>Learn how to customize the theme...</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

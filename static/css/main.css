@@ -1,0 +1,932 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* General Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between; /* Push left and right sections apart */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff54; /* Ensure background is white for a clean look */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.nav-left a {
+    color: black; /* Makes the links black */
+    font-weight: bold; /* Default bold for all links */
+    text-decoration: none; /* Removes underline */
+    margin-right: 20px; /* Space between links */
+    padding: 10px 0; /* Adds padding for a better click area */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 16px; /* Base size for links */
+}
+
+.nav-left a:hover {
+    color: green; /* Change to green on hover */
+}
+
+/* Specific style for the "Home" link */
+.nav-left a:first-child {
+    font-size: 18px; /* Slightly bigger */
+    font-weight: 900; /* Extra bold for emphasis */
+}
+
+
+/* Right-aligned navbar items */
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Changelog styling */
+.changelog-link {
+    border: 1px solid #4CAF50; /* Green thin border */
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #4CAF50; /* Green text */
+}
+
+.changelog-link:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Contact styling */
+.contact-link {
+    background-color: #333; /* Black background */
+    color: #fff; /* White text */
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.contact-link:hover {
+    background-color: #fff; /* White background on hover */
+    color: #333; /* Black text on hover */
+    border: 1px solid #333; /* Add a border on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    li {
+        margin-right: 10px;
+    }
+}
+
+/* General Styling */
+.hero-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* How can we help you? Section */
+.help-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.help-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.help-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 60%;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Cards Section */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #777;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #999;
+}
+
+
+
+
+
+/* Search Bar Styling */
+.search-container {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.search-input {
+    padding: 15px 25px;  /* Thicker padding for a more substantial feel */
+    width: 50%;  /* Adjust width for a shorter search bar */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Milky shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition on hover/focus */
+    color: #333;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green focus border */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger focus shadow */
+}
+
+.search-input::placeholder {
+    color: #bbb;  /* Softer color for placeholder text */
+}
+
+.search-input:hover {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15); /* Slightly stronger hover shadow */
+    border-color: #4CAF50; /* Hover color for border */
+}
+
+
+
+
+/* Individual card styling */
+.card {
+    flex: 1;
+    max-width: 300px;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Modern, subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;  /* Space from the bottom */
+}
+
+/* Hover effect to make the card "pop" */
+.card:hover {
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0); /* Deeper shadow on hover */
+    transform: translateY(-5px);  /* Lift the card on hover */
+}
+
+/* Link styling to remove default text decoration */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Icon style */
+.card-icon {
+    font-size: 2.5rem;
+    color: #4caf50; /* Green color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Card title style */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Card description style */
+.card p {
+    color: #555;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects on the card's title and icon */
+.card:hover .card-title {
+    color: #000000c2;  /* Darker green on hover */
+}
+
+.card:hover .card-icon {
+    color: #0000007c; /* Even darker green on hover */
+}
+
+.card:hover p {
+    color: #080808bb;  /* Slightly lighter text on hover */
+}
+
+/* Optional: Add a subtle animation for a smooth hover effect */
+.card-link {
+    display: block;
+    position: relative;
+}
+
+.card-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-link:hover::after {
+    opacity: 1;  /* Slight dark overlay when hovering */
+}
+
+
+
+
+/*browse topics*/
+/* Centering the entire container holding the section title and description */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center;   /* Center text inside */
+    margin: 40px 0;
+    padding: 0 20px;  /* Optional: Adds padding to avoid touching edges */
+}
+
+/* Styling the section title (Browse Topics) */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling the section description */
+.section-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Optional: Add some space around the text container */
+.text-container {
+    max-width: 900px;  /* Optional: Limits the width to prevent overly wide text */
+    width: 100%;  /* Ensure it spans the available width */
+    margin: 0 auto;  /* Center the text container */
+}
+
+
+
+
+
+
+
+
+
+
+/* Ensure the entire body takes at least 100% height */
+html, body {
+    height: 100%;  /* Allow full height for the page */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Main content area (ensure it expands to fill remaining space) */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure it starts from the top */
+    min-height: calc(100vh - 100px); /* Adjust this value to be the height of your header/footer */
+    padding: 20px;
+}
+
+/* Footer styling (ensure it is not fixed or overlapping) */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure footer is part of the flow, not fixed */
+}
+
+/* Card container (ensure it expands to fit available space) */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;  /* Allow cards to wrap if necessary */
+    max-width: 1200px;
+}
+
+/* Individual card styles */
+.card {
+    flex: 1;
+    max-width: 300px;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Additional adjustments for full height */
+.card-container .card {
+    height: 100%;
+}
+
+/* Optional: Adjusting layout for mobile */
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Ensure FAQ section is centered */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Title and subtitle styling */
+.faq-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Accordion container styling */
+.faq-accordion {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* FAQ item (question + answer) */
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent answer from overflowing the card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Style for each question button */
+.faq-question {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for modern effect */
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #fff, #f1f1f1); /* Subtle neumorphism effect */
+}
+
+/* Hover effect for question button */
+.faq-question:hover {
+    background-color: #f1f1f1;
+    color: #116e28;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Hidden answer section (will be displayed when clicked) */
+.faq-answer {
+    display: block;
+    overflow: hidden;
+    padding: 0 20px;
+    border-left: 3px solid #0f7e34;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    border-radius: 0 0 8px 8px;
+    font-size: 1rem;
+    color: #555;
+    opacity: 0;
+    max-height: 0; /* Start collapsed */
+    transition: max-height 0.5s ease-out, padding 0.3s ease-out, opacity 0.3s ease-out; /* Smooth expand */
+    transform-origin: top;
+}
+
+/* When the question is active, show the answer */
+.faq-item.active .faq-answer {
+    opacity: 1;
+    max-height: 500px; /* Adjust as necessary for content */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on active answer */
+    transform: scale(1.05); /* Slight scaling on expand */
+}
+
+/* Optional: Mobile responsive */
+@media screen and (max-width: 768px) {
+    .faq-title {
+        font-size: 2rem;
+    }
+
+    .faq-subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Ensure the Popular Articles section is centered */
+.popular-articles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Title and subtitle styling */
+.popular-articles-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popular-articles-subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Card container to hold articles */
+.popular-articles-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Article card styling */
+.popular-articles-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for modern neumorphism */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    background: linear-gradient(145deg, #fff, #f1f1f1); /* Subtle neumorphism effect */
+}
+
+/* Hover effect on cards */
+.popular-articles-card:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Article Title */
+.popular-articles-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Article Description */
+.popular-articles-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Link to read more */
+.popular-articles-card a {
+    font-size: 1rem;
+    color: #28a745; /* Green for links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.popular-articles-card a:hover {
+    color: #218838;
+    text-decoration: underline;
+}
+
+/* Optional: Mobile responsive */
+@media screen and (max-width: 768px) {
+    .popular-articles-title {
+        font-size: 2rem;
+    }
+
+    .popular-articles-subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Container */
+.footer-container {
+    background: #f8f7f700;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0);
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure Separation from Above Content */
+.footer-container {
+    margin-top: 100px; /* Add space above the footer */
+}
+
+/* Contact Button */
+.footer-contact {
+    margin-bottom: 30px;
+}
+
+.footer-button {
+    background: linear-gradient(145deg, #e9f5e9, #ffffff);
+    border: 2px solid #28a745;
+    color: #28a745;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.footer-button:hover {
+    background: #28a745;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Links Section */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #555;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background: #0c3616;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #0e4b1c;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #083513;
+    transform: rotate(-10deg) scale(1.2);
+}
+
+/* Footer Tagline */
+.made-by {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Main Docs Container */
+.docs-container {
+    display: flex;
+    height: 100vh;
+    margin: 20px;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Table of Contents */
+.vertical-toc {
+    width: 250px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    height: 100%;
+    overflow-y: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vertical-toc ul {
+    list-style-type: lower-roman;
+    padding: 0px;
+}
+
+.vertical-toc li {
+    margin: 20px 0;
+}
+
+.vertical-toc a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Sidebar Links */
+.vertical-toc a:hover {
+    background-color: #03180893;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Active Link */
+.vertical-toc a.active {
+    background-color: #0e5f21;
+    color: #fff;
+    padding: 12px;
+}
+
+/* Content Section */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Hide all sections by default */
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show active section */
+.content-section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Optional: Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to active sections */
+.content-section.animated {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

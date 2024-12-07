@@ -1,10 +1,10 @@
 # support.site
 ### Built with Zola CMS 🤖 ·
 
-- How to run🚀
+#### How to run🚀
 + Install Zola
 
-- Command
+#### Command
 + Zola build
 +Zole Serve
 

@@ -6,6 +6,6 @@
 
 #### Command
 + Zola build
-+Zole Serve
++ Zola Serve
 
 ## We are live  🦾. 🛠️

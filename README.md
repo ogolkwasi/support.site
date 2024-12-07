@@ -1,5 +1,5 @@
 # support.site
-###Built with Zola CMS 🤖 ·
+### Built with Zola CMS 🤖 ·
 
 - How to run🚀
 + Install Zola

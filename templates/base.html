@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config.title }}</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ '/css/main.css' }}">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css">
 </head>
 <body>
+    
     <script>
         function searchResults(form) {
         
@@ -137,7 +139,7 @@
         
         
         
-                                                <li class="uk-active"><a href="/" >Home</a></li>
+                                                <li><a href="/" >Home</a></li>
         
         
         
@@ -198,34 +200,49 @@
                             <a class="uk-navbar-item uk-logo" href="/">Docs</a>
                         </div>
                         <div class="uk-navbar-right">
-        
-        
-        
-        
+                            <div>
+                                <a id="search-navbar-toggle" class="uk-navbar-toggle uk-search-icon uk-icon" uk-search-icon="" href="#" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="search-icon"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path></svg></a>
+                                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0" style="left: 519.771px; top: 15px;">
+                                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                                        <input id="search-navbar" class="uk-search-input" type="search" placeholder="Search for answers" autofocus="" autocomplete="off">
+                                    </form>
+                                    <ul id="search-navbar-results" class="uk-position-absolute uk-width-1-1 uk-list" style="display: block;"></ul>
+                                </div>
+                            </div>
+                            <script>
+                                SimpleJekyllSearch({
+                                    searchInput:
+                                        document.getElementById(
+                                            "search-navbar",
+                                        ),
+                                    resultsContainer: document.getElementById(
+                                        "search-navbar-results",
+                                    ),
+                                    noResultsText:
+                                        '<li class="no-results">No results found</li>',
+                                    searchResultTemplate:
+                                        '<li><a href="{url}">{title}</a></li>',
+                                    json: "/search.json",
+                                });
+                                searchResults("search-navbar");
+                            </script>
+
                             <ul class="uk-navbar-nav uk-visible@m">
-        
-        
-        
-        
-        
-                                            <li><div class="uk-navbar-item"><a class="uk-button uk-button-primary-outline" href="/changelog-timeline/" >Changelog</a></div></li>
-        
-        
-        
-        
-        
-        
-        
-                                            <li><div class="uk-navbar-item"><a class="uk-button uk-button-success" href="/contact/" >Contact</a></div></li>
-        
-        
-        
+                                <li>
+                                    <div class="uk-navbar-item">
+                                        <a class="uk-button uk-button-primary-outline" href="/changelog-timeline/">Changelog</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="uk-navbar-item">
+                                        <a class="uk-button uk-button-success" href="/contact/">Contact</a>
+                                    </div>
+                                </li>
                             </ul>
-        
-        
-                                <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
-        
-        
+
+                            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle=""><span data-uk-navbar-toggle-icon="" class="uk-navbar-toggle-icon uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></span>
+                                <span class="uk-margin-small-left">Menu</span></a>
                         </div>
                     </div>
                 </div>
